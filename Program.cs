@@ -108,17 +108,22 @@ Console.WriteLine("Hello, World!");
 
 
 CommonOperations commonOperations = new CommonOperations();
-var k = await commonOperations.GetAllAsync<Title>();
-var d = await commonOperations.GetAllAsync<Genre>();
+
+CommonOperations commonOperations1 = new CommonOperations();
+
+var d = await commonOperations1.GetAllAsync<Genre>();
+var dd = d.First();
+
+Title kad = new Title { TitleName = "TitleNew1", TitleAdditionalName = "TitleNew1", Description=  "TitleNew1TitleNew1TitleNew1", Date = 2001, Genres = { dd } };
+var saf = await commonOperations1.AddEntityAsync<Title>(kad);
+
+var k = await commonOperations1.GetAllAsync<Title>();
 
 
 foreach (var title in k)
 {
     Console.WriteLine($"Title Id: {title.Id}, UserName: {title.Genres.Count()}");
 }
-
-
-
 
 
 
