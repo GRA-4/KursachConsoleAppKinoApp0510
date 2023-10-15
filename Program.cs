@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using WebApplicationKinoAPI0510;
+using WebApplicationKinoAPI0510.Additional;
 
 Console.WriteLine("Hello, World!");
 
